@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "skills": "Skills",
+    "projects": "Projects",
+    "connect": "Connect Me"
+  },
+  "home": {
+    "title": "Welcome to My Portfolio",
+    "subtitle": "Hi, I'm a Full Stack Web Developer",
+    "description": "I create beautiful and functional web applications using modern technologies. Let's build something amazing together!"
+  },
+  "about": {
+    "title": "About Me",
+    "content1": "I'm a passionate full stack web developer with expertise in creating responsive and user-friendly web applications. With a strong foundation in both front-end and back-end technologies, I bring ideas to life through clean and efficient code.",
+    "content2": "I believe in continuous learning and staying up-to-date with the latest industry trends to deliver the best solutions for my clients. When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing my knowledge with the developer community."
+  },
+  "services": {
+    "title": "My Services",
+    "frontend": "Frontend Development",
+    "frontendDesc": "Creating responsive and interactive user interfaces with React.js, modern CSS, and cutting-edge frameworks.",
+    "backend": "Backend Development",
+    "backendDesc": "Building robust server-side applications and RESTful APIs with Node.js, Express, and databases.",
+    "fullstack": "Full Stack Development",
+    "fullstackDesc": "End-to-end web application development from database design to user interface implementation.",
+    "responsive": "Responsive Design",
+    "responsiveDesc": "Ensuring your website looks great and functions perfectly on all devices and screen sizes."
+  },
+  "skills": {
+    "title": "My Skills"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "My name is Esraa, I live in Giza, this is my collection of projects.",
+    "filter": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "viewProject": "View Project"
+  },
+  "connect": {
+    "title": "Connect With Me",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project or idea...",
+    "send": "Send Message",
+    "success": "Thank you for reaching out! I'll get back to you soon."
+  },
+  "footer": {
+    "copyright": "© 2024 DevPortfolio. All rights reserved."
+  },
+  "theme": {
+    "dark": "Dark Mode",
+    "light": "Light Mode"
+  }
+}

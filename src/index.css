@@ -1,0 +1,154 @@
+:root {
+  /* Simple Professional Palette */
+  --color-dark: #1E1E2F;        /* Dark navy - headers, footer */
+  --color-gray: #2D2D3A;         /* Medium gray - sections, cards */
+  --color-accent: #FF4D6D;       /* Pink - buttons, highlights */
+  --color-light: #F8F9FA;        /* Light background */
+  --color-white: #FFFFFF;        /* White - cards, contrast */
+  
+  /* Text Colors */
+  --color-text-dark: #1E1E2F;    /* Dark text */
+  --color-text-light: #6B7280;   /* Gray text */
+  --color-text-white: #F8F9FA;   /* White text */
+  
+  /* Keeping your pink variables for compatibility with components */
+  --color-vvdpink: #1E1E2F;      /* Dark navy */
+  --color-vdpink: #6B7280;        /* Gray */
+  --color-dpink: #FF4D6D;         /* Accent pink */
+  --color-ldpink: #FFB3C1;        /* Light pink */
+  --color-pink: #FF4D6D;          /* Accent pink */
+  --color-lpink: #FF758F;         /* Light pink */
+  --color-llpink: #2D2D3A;        /* Gray */
+  --color-vlpink: #F8F9FA;        /* Light background */
+  --color-vvlpink: #FFCCD5;       /* Very light pink */
+  --color-wpink: #FFFFFF;         /* White */
+}
+
+/* Dark Mode Root Variables */
+.dark-mode {
+  --color-dark: #1A1A1A;
+  --color-gray: #2A2A2A;
+  --color-accent: #FF4D6D;
+  --color-light: #1E1E2F;
+  --color-white: #2D2D3A;
+  --color-text-dark: #F8F9FA;
+  --color-text-light: #FFB3C1;
+  --color-text-white: #F8F9FA;
+  
+  /* Dark mode pink variables */
+  --color-vvdpink: #1A1A1A;
+  --color-vdpink: #FFB3C1;
+  --color-dpink: #FF4D6D;
+  --color-ldpink: #FF8FA3;
+  --color-pink: #FF4D6D;
+  --color-lpink: #FF758F;
+  --color-llpink: #2A2A2A;
+  --color-vlpink: #1E1E2F;
+  --color-vvlpink: #FFB3C1;
+  --color-wpink: #2D2D3A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-light);
+  color: var(--color-text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Body */
+.dark-mode body {
+  background-color: var(--color-dark);
+  color: var(--color-text-white);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark);
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Basic Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: var(--color-text-white);
+}
+
+p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-dark);
+}
+
+.dark-mode a:hover {
+  color: var(--color-text-white);
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}

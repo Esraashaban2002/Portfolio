@@ -1,0 +1,379 @@
+/* ====================================
+   Skills Section Styles
+   ==================================== */
+
+.skills-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--color-light), var(--color-white));
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Elements */
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+    opacity: 0.03;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.skills-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-pink) 0%, transparent 70%);
+    opacity: 0.03;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-pink));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+/* Skills Filter */
+.skills-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 2rem;
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+    border: 2px solid var(--color-gray);
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.filter-btn.active {
+   border-color: var(--color-accent);
+    color: var(--color-accent);
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Skill Card */
+.skill-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-gray);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-pink));
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.15);
+    border-color: var(--color-accent);
+}
+
+.skill-card:hover::before {
+    transform: translateX(0);
+}
+
+.skill-card-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Skill Icon */
+.skill-icon-wrapper {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.skill-card:hover .skill-icon-wrapper {
+    transform: scale(1.1) rotate(360deg);
+}
+
+/* Skill Name */
+.skill-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 0.8rem;
+}
+
+/* Skill Description */
+.skill-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin-bottom: 1.2rem;
+    min-height: 70px;
+}
+
+/* Progress Indicator */
+.skill-progress-indicator {
+    margin-top: 1rem;
+    width: 100%;
+    height: 3px;
+    background: var(--color-gray);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Skills Summary */
+.skills-summary {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-white), var(--color-light));
+    border-radius: 20px;
+    border: 1px solid var(--color-gray);
+    flex-wrap: wrap;
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.summary-label {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+/* Dark Mode */
+.dark-mode .skills-section {
+    background: linear-gradient(135deg, var(--color-dark), var(--color-gray));
+}
+
+.dark-mode .skill-card {
+    background: linear-gradient(135deg, var(--color-gray), var(--color-dark));
+    border-color: var(--color-dark);
+}
+
+.dark-mode .skill-name {
+    color: var(--color-text-white);
+}
+
+.dark-mode .skill-description {
+    color: var(--color-text-white);
+    opacity: 0.8;
+}
+
+.dark-mode .skills-summary {
+    background: linear-gradient(135deg, var(--color-gray), var(--color-dark));
+    border-color: var(--color-dark);
+}
+
+.dark-mode .filter-btn {
+    background: var(--color-gray);
+    color: var(--color-text-white);
+    border-color: var(--color-dark);
+}
+
+.dark-mode .filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.dark-mode .filter-btn.active {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-pink));
+    color: var(--color-white);
+}
+
+/* RTL Support */
+[dir="rtl"] .skill-description {
+    text-align: right;
+}
+
+[dir="rtl"] .skills-filter {
+    direction: rtl;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .skill-icon-wrapper {
+        font-size: 2.5rem;
+    }
+    
+    .skill-name {
+        font-size: 1.2rem;
+    }
+    
+    .skill-description {
+        font-size: 0.85rem;
+        min-height: 60px;
+    }
+    
+    .skills-summary {
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .summary-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .skill-description {
+        min-height: auto;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.05s; }
+.skill-card:nth-child(2) { animation-delay: 0.1s; }
+.skill-card:nth-child(3) { animation-delay: 0.15s; }
+.skill-card:nth-child(4) { animation-delay: 0.2s; }
+.skill-card:nth-child(5) { animation-delay: 0.25s; }
+.skill-card:nth-child(6) { animation-delay: 0.3s; }
+.skill-card:nth-child(7) { animation-delay: 0.35s; }
+.skill-card:nth-child(8) { animation-delay: 0.4s; }

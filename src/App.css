@@ -1,0 +1,369 @@
+/* Root Variables - Simple Professional Palette */
+:root {
+  /* Primary Colors */
+  --color-dark: #1E1E2F;        /* Dark navy - headers, footer */
+  --color-gray: #2D2D3A;         /* Medium gray - sections, cards */
+  --color-accent: #FF4D6D;       /* Pink - buttons, highlights */
+  --color-light: #F8F9FA;        /* Light background */
+  --color-white: #FFFFFF;        /* White - cards, contrast */
+  
+  /* Text Colors */
+  --color-text-dark: #1E1E2F;    /* Dark text */
+  --color-text-light: #6B7280;   /* Gray text */
+  --color-text-white: #F8F9FA;   /* White text */
+  
+  /* Keeping your pink variables for compatibility */
+  --color-vvdpink: #1E1E2F;      /* Replaced with dark */
+  --color-vdpink: #6B7280;        /* Replaced with gray */
+  --color-dpink: #FF4D6D;         /* Same as accent */
+  --color-ldpink: #FFB3C1;        /* Light pink */
+  --color-pink: #FF4D6D;          /* Same as accent */
+  --color-lpink: #FF758F;         /* Light pink */
+  --color-llpink: #2D2D3A;        /* Replaced with gray */
+  --color-vlpink: #F8F9FA;        /* Replaced with light */
+  --color-vvlpink: #FFB3C1;       /* Light pink */
+  --color-wpink: #FFFFFF;         /* Replaced with white */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --color-dark: #1A1A1A;
+  --color-gray: #2A2A2A;
+  --color-accent: #FF4D6D;
+  --color-light: #1E1E2F;
+  --color-white: #2D2D3A;
+  --color-text-dark: #F8F9FA;
+  --color-text-light: #FFB3C1;
+  --color-text-white: #F8F9FA;
+  
+  /* Updated pink variables for dark mode */
+  --color-vvdpink: #1A1A1A;
+  --color-vdpink: #FFB3C1;
+  --color-dpink: #FF4D6D;
+  --color-ldpink: #FF8FA3;
+  --color-pink: #FF4D6D;
+  --color-lpink: #FF758F;
+  --color-llpink: #2A2A2A;
+  --color-vlpink: #1E1E2F;
+  --color-vvlpink: #FFB3C1;
+  --color-wpink: #2D2D3A;
+  
+  background-color: #1A1A1A;
+  color: #F8F9FA;
+}
+
+body.dark-mode .section:nth-child(even) {
+  background-color: #2A2A2A;
+}
+
+body.dark-mode .service-card,
+body.dark-mode .project-card,
+body.dark-mode .about-content,
+body.dark-mode .connect-form,
+body.dark-mode .skill-item {
+  background-color: #2A2A2A;
+  color: #F8F9FA;
+}
+
+/* Theme Toggle Buttons */
+.theme-language-toggles {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.theme-toggle,
+.language-toggle {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-text-white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover,
+.language-toggle:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* RTL Support */
+[dir="rtl"] .theme-language-toggles {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .nav-menu {
+  padding-right: 0;
+}
+
+[dir="rtl"] .section h1 {
+  text-align: right;
+}
+
+[dir="rtl"] .about-content {
+  text-align: right;
+}
+
+[dir="rtl"] .service-card {
+  text-align: right;
+}
+
+/* Update container for RTL */
+[dir="rtl"] .container {
+  text-align: right;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Container for all content */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+
+/* Main Content */
+.main-content {
+  margin-top: 80px;
+}
+
+/* Section Styles */
+.section {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-margin-top: 80px;
+  background-color: var(--color-light);
+}
+
+.section:nth-child(even) {
+  background-color: var(--color-white);
+}
+
+.section .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-dark);
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.section-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid var(--color-gray);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255, 77, 109, 0.15);
+  border-color: var(--color-accent);
+}
+
+.service-card h3 {
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-content p:last-child {
+  margin-top: 1.5rem;
+}
+
+/* Connect Section */
+.connect-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--color-white);
+  font-family: inherit;
+  color: var(--color-text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.1);
+}
+
+.submit-btn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-text-white);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer p {
+  color: var(--color-text-white);
+  opacity: 0.8;
+}
+
+/* Dark mode specific overrides */
+.dark-mode .service-card p,
+.dark-mode .project-card p,
+.dark-mode .about-content,
+.dark-mode .form-group label {
+  color: var(--color-text-white);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: var(--color-gray);
+  color: var(--color-text-white);
+  border-color: var(--color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  .section .container {
+    width: 90%;
+  }
+  
+  .nav-menu {
+    gap: 0.5rem;
+  }
+  
+  .nav-menu li a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .section h1 {
+    font-size: 2rem;
+  }
+  
+  .home-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .home-section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
