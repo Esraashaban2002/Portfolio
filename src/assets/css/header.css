@@ -51,6 +51,7 @@
 
 /* Connect button */
 .connect-btn {
+  border: 0;
   background-color: var(--color-accent) !important;
   color: var(--color-white) !important;
   border-radius: 25px !important;

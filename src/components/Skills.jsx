@@ -5,15 +5,12 @@ import '../assets/css/Skills.css';
 // Import icons from react-icons
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, 
-  FaGitAlt, FaBootstrap, FaFigma, FaPython,
+  FaGitAlt, FaBootstrap,
   FaUsers, FaClock, FaComments, FaLightbulb,
-  FaHandsHelping, FaTasks, FaRocket, FaDatabase,
-  FaServer, FaMobileAlt, FaPaintBrush, FaChartLine
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiTailwindcss, SiRedux, SiMongodb, 
-  SiExpress, SiPostgresql, SiDocker, SiJest,
-  SiGraphql, SiNextdotjs, SiPrisma, SiJwt
+  SiExpress
 } from 'react-icons/si';
 
 const Skills = () => {

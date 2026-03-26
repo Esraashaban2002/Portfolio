@@ -3,15 +3,12 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Services.css';
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, 
-  FaGitAlt, FaBootstrap, FaFigma, FaPython,
-  FaUsers, FaClock, FaComments, FaLightbulb,
-  FaHandsHelping, FaTasks, FaRocket, FaHeadset,
+  FaGitAlt, FaBootstrap, FaRocket, FaHeadset,
   FaSync, FaBug, FaChartLine, FaDesktop
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiTailwindcss, SiRedux, SiMongodb, 
-  SiExpress, SiPostgresql, SiDocker, SiJest,
-  SiGraphql, SiNextdotjs
+  SiExpress
 } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
 

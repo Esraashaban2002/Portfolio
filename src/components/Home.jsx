@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useMemo  } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Home.css';
 import logo from '../assets/images/logoP.png';
@@ -13,17 +13,19 @@ const Home = () => {
     const [typingSpeed, setTypingSpeed] = useState(150);
   
     // Words based on language
-    const words = language === 'en' 
-        ? [
-            "Full Stack Developer",
-            "Front End Developer",
-            "Back End Developer",
-          ]
-        : [
-            "مطور ويب متكامل",
-            "مطور واجهة أمامية",
-            "مطور واجهة خلفية",
-          ];
+   const words = useMemo(() => {
+  return language === 'en'
+    ? [
+        "Full Stack Developer",
+        "Front End Developer",
+        "Back End Developer",
+      ]
+    : [
+        "مطور ويب متكامل",
+        "مطور واجهة أمامية",
+        "مطور واجهة خلفية",
+      ];
+}, [language]);
  
     useEffect(() => {
         const handleTyping = () => {

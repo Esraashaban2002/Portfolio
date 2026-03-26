@@ -1,51 +1,51 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useTheme } from '../contexts/ThemeContext';
-import logo from '../assets/images/logoP.png';
-import '../assets/css/header.css'
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
+import logo from "../assets/images/logoP.png";
+import "../assets/css/header.css";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { isDarkMode, language, toggleTheme, toggleLanguage } = useTheme();
 
   const navItems = [
-    { name: 'home', nameAr: 'الرئيسية', path: '/' },
-    { name: 'about', nameAr: 'عنّي', path: '/about' },
-    { name: 'education', nameAr: 'التعليم', path: '/education' },
-    { name: 'services', nameAr: 'الخدمات', path: '/services' },
-    { name: 'skills', nameAr: 'المهارات', path: '/skills' },
-    { name: 'projects', nameAr: 'المشاريع', path: '/projects' },
-    { name: 'testimonials', nameAr: 'التوصيات', path: '/testimonials' }
+    { name: "home", nameAr: "الرئيسية", path: "/" },
+    { name: "about", nameAr: "عنّي", path: "/about" },
+    { name: "education", nameAr: "التعليم", path: "/education" },
+    { name: "services", nameAr: "الخدمات", path: "/services" },
+    { name: "skills", nameAr: "المهارات", path: "/skills" },
+    { name: "projects", nameAr: "المشاريع", path: "/projects" },
+    { name: "testimonials", nameAr: "التوصيات", path: "/testimonials" },
   ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleNavigation = (path, sectionName) => {
-    if (location.pathname === '/') {
+    if (location.pathname === "/") {
       scrollToSection(sectionName.toLowerCase());
     } else {
-      navigate('/', { state: { scrollTo: sectionName.toLowerCase() } });
+      navigate("/", { state: { scrollTo: sectionName.toLowerCase() } });
     }
   };
 
   const handleConnectClick = () => {
-    if (location.pathname === '/') {
-      scrollToSection('connect');
+    if (location.pathname === "/") {
+      scrollToSection("connect");
     } else {
-      navigate('/', { state: { scrollTo: 'connect' } });
+      navigate("/", { state: { scrollTo: "connect" } });
     }
   };
 
   const handleLogoClick = () => {
-    if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      navigate('/');
+      navigate("/");
     }
   };
 
@@ -77,36 +77,43 @@ const Header = () => {
               {navItems.map((item) => (
                 <li key={item.name} className="nav-item">
                   <a
-                    onClick={() => handleNavigation(item.path, item.name)}
-                    className={`nav-link ${location.pathname === '/' &&
+                    href={`#${item.name}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(item.path, item.name);
+                    }}
+                    className={`nav-link ${
+                      location.pathname === "/" &&
                       document.getElementById(item.name)
-                      ? 'active'
-                      : ''}`}
+                        ? "active"
+                        : ""
+                    }`}
                   >
-                    {language === 'ar'
+                    {language === "ar"
                       ? item.nameAr
                       : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                   </a>
                 </li>
               ))}
-                <li className="nav-item  me-2">
-                <a onClick={handleConnectClick} className="connect-btn nav-link">
-                  {language === 'ar' ? 'تواصل معي' : 'Connect Me'}
-                </a>
+              <li className="nav-item  me-2">
+                <button
+                  onClick={handleConnectClick}
+                  className="connect-btn nav-link"
+                >
+                  {language === "ar" ? "تواصل معي" : "Connect Me"}
+                </button>
               </li>
             </ul>
 
             {/* Theme & Language toggles */}
             <div className="theme-language-toggles ms-lg-3 mt-2 mt-lg-0">
               <button onClick={toggleTheme} className="theme-toggle me-2">
-                {isDarkMode ? '☀️' : '🌙'}
+                {isDarkMode ? "☀️" : "🌙"}
               </button>
               <button onClick={toggleLanguage} className="language-toggle">
-                {language === 'en' ? 'عربي' : 'EN'}
+                {language === "en" ? "عربي" : "EN"}
               </button>
-
             </div>
-            
           </div>
         </div>
       </nav>

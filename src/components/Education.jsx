@@ -20,46 +20,6 @@ const Education = () => {
     logo: universityLogo
   };
 
-  // Certifications data from CV
-  const certifications = [
-    {
-      id: 1,
-      title: language === 'ar' ? 'دبلومة Back-end (.NET Core)' : 'Back-end (.NET Core) diploma',
-      organization: 'Route Academy',
-      year: '2025',
-      link: '#',
-      icon: 'fas fa-code-branch',
-      color: '#512BD4'
-    },
-    {
-      id: 2,
-      title: language === 'ar' ? 'تطوير الويب' : 'Web Development',
-      organization: 'Sprints',
-      year: '2025',
-      link: '#',
-      icon: 'fas fa-globe',
-      color: '#FF4D6D'
-    },
-    {
-      id: 3,
-      title: language === 'ar' ? 'اختبار البرمجيات' : 'Software Testing',
-      organization: 'Sprints',
-      year: '2025',
-      link: '#',
-      icon: 'fas fa-vial',
-      color: '#8B5CF6'
-    },
-    {
-      id: 4,
-      title: language === 'ar' ? 'شهادة تقدير - ITIDA' : 'Certificate of Acknowledgement - ITIDA',
-      organization: 'ITIDA | TIEC',
-      year: '2025',
-      link: '#',
-      icon: 'fas fa-award',
-      color: '#F59E0B'
-    }
-  ];
-
   return (
     <section id="education" className="section education-section py-5 ">
       <div className="container">
