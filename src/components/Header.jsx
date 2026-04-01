@@ -15,6 +15,7 @@ const Header = () => {
     { name: "services", nameAr: "الخدمات", path: "/services" },
     { name: "skills", nameAr: "المهارات", path: "/skills" },
     { name: "projects", nameAr: "المشاريع", path: "/projects" },
+    { name: "achievements", nameAr: "الإنجازات", path: "/achievements" },
     { name: "testimonials", nameAr: "التوصيات", path: "/testimonials" },
   ];
 

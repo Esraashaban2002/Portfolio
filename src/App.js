@@ -13,6 +13,7 @@ import Connect from './components/Connect';
 import Footer from './components/Footer';
 import Pricing from './components/Pricing'
 import './App.css';
+import Achievements from './components/Achievements';
 
 // Scroll handler component
 const ScrollHandler = () => {
@@ -47,6 +48,7 @@ function AppContent() {
               <Skills />
               <Services />
               <Projects />
+              <Achievements />
               <Testimonials />
               <Connect />
               <Footer/>
