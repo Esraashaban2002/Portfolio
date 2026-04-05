@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import logo from '../assets/images/_Logo.png';
+import logo from '../assets/images/LogoAbout.png';
 import '../assets/css/about.css';
 
 const About = () => {
