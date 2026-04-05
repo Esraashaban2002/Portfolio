@@ -12,7 +12,7 @@ const Pricing = () => {
     {
   id: 1,
   name: language === 'ar' ? 'الخطة الأساسية' : 'Basic Plan',
-  price: '$50 - $100',
+  price: '$5 - $50',
  description: language === 'ar' 
         ? 'مثالي للمشاريع الصغيرة والبدايات'
         : 'Perfect for small projects and startups',
@@ -35,7 +35,7 @@ const Pricing = () => {
     {
   id: 2,
   name: language === 'ar' ? 'الخطة الاحترافية' : 'Professional Plan',
-  price: '$120 - $200',
+  price: '$60 - $120',
   description: language === 'ar' 
     ? 'مناسبة للمشاريع المتوسطة التي تحتاج نظام متكامل (Front-End + Back-End)'
     : 'Ideal for medium projects requiring a full-stack solution',
