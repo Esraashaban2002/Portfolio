@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.330b377a.css",
-    "main.js": "/Portfolio/static/js/main.694e115c.js",
+    "main.css": "/Portfolio/static/css/main.098c9045.css",
+    "main.js": "/Portfolio/static/js/main.b7eabf3d.js",
     "static/media/crmDashboard.png": "/Portfolio/static/media/crmDashboard.03844e8ffed4de74a361.png",
     "static/media/beautifulShop.png": "/Portfolio/static/media/beautifulShop.cc7a1603cf1250f0099b.png",
     "static/media/ecommerce.png": "/Portfolio/static/media/ecommerce.86f23a0f6454375e781a.png",
@@ -10,11 +10,11 @@
     "static/media/logoP.png": "/Portfolio/static/media/logoP.e2a1586d8217ba66b4ea.png",
     "static/media/helwan-university-logo.png": "/Portfolio/static/media/helwan-university-logo.798a517400e3e09bd2f6.png",
     "index.html": "/Portfolio/index.html",
-    "main.330b377a.css.map": "/Portfolio/static/css/main.330b377a.css.map",
-    "main.694e115c.js.map": "/Portfolio/static/js/main.694e115c.js.map"
+    "main.098c9045.css.map": "/Portfolio/static/css/main.098c9045.css.map",
+    "main.b7eabf3d.js.map": "/Portfolio/static/js/main.b7eabf3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.330b377a.css",
-    "static/js/main.694e115c.js"
+    "static/css/main.098c9045.css",
+    "static/js/main.b7eabf3d.js"
   ]
 }
