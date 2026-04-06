@@ -270,9 +270,7 @@ const Connect = () => {
                     <i className="fab fa-whatsapp"></i>
                   </div>
                   <div className="contact-info flex-grow-1 ">
-                    <span className="contact-label d-block small text-muted">
-                      {language === "ar" ? "واتساب" : "Whatsapp"}
-                    </span>
+                    
                     <a
                       href={contactInfo.whatsapp}
                       onClick={(e) => {
@@ -281,7 +279,9 @@ const Connect = () => {
                       }}
                       className="contact-value text-decoration-none"
                     >
-                      {contactInfo.phone}
+                      <span className="contact-label d-block small">
+                      {language === "ar" ? "واتساب" : "Whatsapp"}
+                    </span>
                     </a>
                   </div>
                 </div>

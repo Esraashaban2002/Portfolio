@@ -198,27 +198,6 @@ const Services = () => {
                 {language === 'ar' ? 'عرض خطط الأسعار' : 'View Pricing Plans'}
                 <i className="fas fa-arrow-right ms-2"></i>
               </button>
-
-        {/* Additional Info Section */}
-        <div className="row mt-5">
-          <div className="col-12">
-            <div className="services-footer text-center p-4 rounded-3">
-              <i className="fas fa-rocket text-primary fs-1 mb-3"></i>
-              <h4 className="mb-2">
-                {language === 'ar' ? 'هل لديك مشروع؟' : 'Have a Project?'}
-              </h4>
-              <p className="text-muted mb-3">
-                {language === 'ar' 
-                  ? 'دعنا نعمل معاً لتحويل فكرتك إلى واقع'
-                  : "Let's work together to bring your idea to life"}
-              </p>
-              <a href="#connect" className="btn btn-primary px-4 py-2 rounded-pill">
-                {language === 'ar' ? 'تواصل معي' : 'Contact Me'}
-              </a>
-               
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

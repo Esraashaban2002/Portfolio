@@ -3,147 +3,144 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Skills.css';
 
 // Import icons from react-icons
-import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, 
+import {
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaGitAlt, FaBootstrap,
   FaUsers, FaClock, FaComments, FaLightbulb,
 } from 'react-icons/fa';
-import { 
-  SiTypescript, SiTailwindcss, SiRedux, SiMongodb, 
+import {
+  SiTypescript, SiTailwindcss, SiRedux, SiMongodb,
   SiExpress
 } from 'react-icons/si';
 
 const Skills = () => {
   const { language } = useTheme();
-  const [activeCategory, setActiveCategory] = useState('technical');
+  const [activeCategory, setActiveCategory] = useState('front');
 
   // Technical Skills Data with Icons and Descriptions
-  const technicalSkills = [
-    { 
-      name: 'HTML5', 
-      icon: <FaHtml5 />, 
+  const frontendSkills = {
+     title: language === 'ar' ? 'تطوير الواجهة الأمامية' : 'Frontend Development',
+    technologies: [
+    {
+      name: 'HTML5',
+      icon: <FaHtml5 />,
       color: '#E34F26',
-      descriptionEn: 'Semantic markup, SEO-friendly structure, accessibility standards',
-      descriptionAr: 'ترميز دلالي، هيكل مناسب لمحركات البحث، معايير الوصول'
     },
-    { 
-      name: 'CSS3', 
-      icon: <FaCss3Alt />, 
+    {
+      name: 'CSS3',
+      icon: <FaCss3Alt />,
       color: '#1572B6',
-      descriptionEn: 'Responsive design, Flexbox, Grid, animations, cross-browser compatibility',
-      descriptionAr: 'تصميم متجاوب، Flexbox، Grid، رسوم متحركة، توافق مع المتصفحات'
     },
-    { 
-      name: 'JavaScript', 
-      icon: <FaJs />, 
+    {
+      name: 'JavaScript',
+      icon: <FaJs />,
       color: '#F7DF1E',
-      descriptionEn: 'ES6+, DOM manipulation, async/await, closures, event handling',
-      descriptionAr: 'ES6+، التعامل مع DOM، async/await، closures، معالجة الأحداث'
     },
-    { 
-      name: 'TypeScript', 
-      icon: <SiTypescript />, 
+    {
+      name: 'TypeScript',
+      icon: <SiTypescript />,
       color: '#3178C6',
-      descriptionEn: 'Type safety, interfaces, generics, advanced types, OOP principles',
-      descriptionAr: 'أمان الأنواع، الواجهات، generics، الأنواع المتقدمة، مبادئ OOP'
     },
-    { 
-      name: 'React.js', 
-      icon: <FaReact />, 
+    {
+      name: 'React.js',
+      icon: <FaReact />,
       color: '#61DAFB',
-      descriptionEn: 'Hooks, context API, state management, custom hooks, component lifecycle',
-      descriptionAr: 'Hooks، context API، إدارة الحالة، custom hooks، دورة حياة المكونات'
     },
-    { 
-      name: 'Node.js', 
-      icon: <FaNodeJs />, 
-      color: '#68A063',
-      descriptionEn: 'Event-driven architecture, streams, file system, clustering',
-      descriptionAr: 'هندسة تعتمد على الأحداث، streams، نظام الملفات، clustering'
-    },
-    { 
-      name: 'Express.js', 
-      icon: <SiExpress />, 
-      color: '#000000',
-      descriptionEn: 'RESTful APIs, middleware, routing, error handling, authentication',
-      descriptionAr: 'APIs RESTful، middleware، التوجيه، معالجة الأخطاء، المصادقة'
-    },
-    { 
-      name: 'MongoDB', 
-      icon: <SiMongodb />, 
-      color: '#47A248',
-      descriptionEn: 'NoSQL databases, aggregation pipelines, indexing, data modeling',
-      descriptionAr: 'قواعد بيانات NoSQL، خطوط التجميع، الفهرسة، نمذجة البيانات'
-    },
-    { 
-      name: 'Git', 
-      icon: <FaGitAlt />, 
-      color: '#F05032',
-      descriptionEn: 'Version control, branching strategies, merge conflicts, CI/CD workflows',
-      descriptionAr: 'التحكم في الإصدارات، استراتيجيات الفروع، تعارضات الدمج، سير عمل CI/CD'
-    },
-    { 
-      name: 'Redux', 
-      icon: <SiRedux />, 
+    {
+      name: 'Redux',
+      icon: <SiRedux />,
       color: '#764ABC',
-      descriptionEn: 'State management, middleware (Thunk/Saga), devtools, reducers',
-      descriptionAr: 'إدارة الحالة، middleware (Thunk/Saga)، أدوات المطور، reducers'
     },
-    { 
-      name: 'Tailwind CSS', 
-      icon: <SiTailwindcss />, 
+    {
+      name: 'Tailwind CSS',
+      icon: <SiTailwindcss />,
       color: '#38B2AC',
-      descriptionEn: 'Utility-first CSS, responsive design, custom themes, dark mode',
-      descriptionAr: 'CSS بالأدوات، تصميم متجاوب، سمات مخصصة، الوضع المظلم'
     },
-    { 
-      name: 'Bootstrap', 
-      icon: <FaBootstrap />, 
+    {
+      name: 'Bootstrap',
+      icon: <FaBootstrap />,
       color: '#7952B3',
-      descriptionEn: 'Component library, grid system, responsive utilities, custom theming',
-      descriptionAr: 'مكتبة المكونات، نظام الشبكة، أدوات متجاوبة، تخصيص السمات'
     }
-  ];
+  ],
+    descriptionEn: 'Designing and developing scalable, high-performance web applications with modern frontend technologies, focusing on clean architecture, maintainable code, optimized rendering, and seamless user experience across devices.',
+    descriptionAr: 'تصميم وتطوير تطبيقات ويب قابلة للتوسع وعالية الأداء باستخدام أحدث تقنيات الواجهة الأمامية، مع التركيز على الهندسة النظيفة، الكود القابل للصيانة، الأداء المحسن، وتجربة مستخدم سلسة عبر جميع الأجهزة.'
+}
+  const backendSkills = {
+     title: language === 'ar' ? 'تطوير الواجهة الخلفية' : 'Backend Development',
+    technologies: [
+    {
+      name: 'Node.js',
+      icon: <FaNodeJs />,
+      color: '#68A063',
+    },
+    {
+      name: 'Express.js',
+      icon: <SiExpress />,
+      color: '#000000',
+    },
+    {
+      name: 'MongoDB',
+      icon: <SiMongodb />,
+      color: '#47A248',
+    },
+    {
+      name: 'Git',
+      icon: <FaGitAlt />,
+      color: '#F05032',
+    }
+  ],
+  descriptionEn: 'Building robust, secure, and scalable server-side applications with Node.js and Express.js. Designing RESTful APIs, implementing authentication and authorization, managing databases, and ensuring optimal performance and reliability.',
+    descriptionAr: 'بناء تطبيقات خادم قوية وآمنة وقابلة للتوسع باستخدام Node.js و Express.js. تصميم RESTful APIs، تنفيذ المصادقة والتفويض، إدارة قواعد البيانات، وضمان الأداء الأمثل والموثوقية.'
+
+  
+}
 
   // Soft Skills Data with Icons and Descriptions
-  const softSkills = [
-    { 
-      name: 'Teamwork', 
-      icon: <FaUsers />, 
+  const softSkills ={
+     title: language === 'ar' ? 'المهارات الشخصية' : 'Soft Skills',
+    technologies: [
+    {
+      name: 'Teamwork',
+      icon: <FaUsers />,
       color: '#FF4D6D',
       descriptionEn: 'Collaborative development, code reviews, pair programming, agile methodology',
       descriptionAr: 'تطوير تعاوني، مراجعات الكود، البرمجة الزوجية، منهجية Agile'
     },
-    { 
-      name: 'Communication', 
-      icon: <FaComments />, 
+    {
+      name: 'Communication',
+      icon: <FaComments />,
       color: '#8B5CF6',
       descriptionEn: 'Technical writing, client communication, presentation skills, active listening',
       descriptionAr: 'كتابة تقنية، تواصل مع العملاء، مهارات العرض، الاستماع النشط'
     },
-    { 
-      name: 'Time Management', 
-      icon: <FaClock />, 
+    {
+      name: 'Time Management',
+      icon: <FaClock />,
       color: '#10B981',
       descriptionEn: 'Task prioritization, deadline management, productivity tools, sprint planning',
       descriptionAr: 'تحديد أولويات المهام، إدارة المواعيد النهائية، أدوات الإنتاجية، تخطيط السباقات'
     },
-    { 
-      name: 'Problem Solving', 
-      icon: <FaLightbulb />, 
+    {
+      name: 'Problem Solving',
+      icon: <FaLightbulb />,
       color: '#F59E0B',
       descriptionEn: 'Analytical thinking, debugging skills, algorithm design, creative solutions',
       descriptionAr: 'تفكير تحليلي، مهارات التصحيح، تصميم الخوارزميات، حلول إبداعية'
     },
-  ];
+    
+  ],
+   descriptionEn: 'Excellent collaboration and communication skills, working effectively in agile teams. Strong problem-solving abilities with analytical thinking. Proven time management and ability to meet deadlines while maintaining quality.',
+    descriptionAr: 'مهارات تعاون وتواصل ممتازة، العمل بفعالية في فرق agile. قدرات قوية في حل المشكلات مع التفكير التحليلي. إدارة وقت مثبتة والقدرة على الوفاء بالمواعيد النهائية مع الحفاظ على الجودة.'
+};
 
   // Category buttons
   const categories = [
-    { id: 'technical', nameEn: 'Technical Skills', nameAr: 'المهارات التقنية' },
+    { id: 'front', nameEn: 'FrontEnd Skills', nameAr: 'مهارات الواجهه الامامية' },
+    { id: 'back', nameEn: 'BackEnd Skills', nameAr: 'مهارات الواجهه الخلفية' },
     { id: 'soft', nameEn: 'Soft Skills', nameAr: 'المهارات الشخصية' },
   ];
 
-  const currentSkills = activeCategory === 'technical' ? technicalSkills : softSkills;
+  const currentSkills = activeCategory === 'front' ? frontendSkills : activeCategory === 'back' ? backendSkills : softSkills;
 
   return (
     <section id="skills" className="section skills-section">
@@ -154,13 +151,13 @@ const Skills = () => {
               {language === 'ar' ? 'مهاراتي' : 'My Skills'}
             </h1>
             <p className="section-subtitle">
-              {language === 'ar' 
+              {language === 'ar'
                 ? 'مجموعة من المهارات التقنية والشخصية التي أمتلكها'
                 : 'A collection of technical and soft skills I possess'}
             </p>
           </div>
         </div>
-        
+
         {/* Category Filter Buttons */}
         <div className="skills-filter">
           {categories.map((category) => (
@@ -176,41 +173,55 @@ const Skills = () => {
 
         <div className="section-content">
           {/* Skills Grid with Cards */}
-          <div className="skills-grid">
-            {currentSkills.map((skill, index) => (
-              <div key={index} className="skill-card">
-                <div className="skill-card-inner">
-                  <div className="skill-icon-wrapper" style={{ color: skill.color }}>
-                    {skill.icon}
-                  </div>
-                  <h3 className="skill-name">{skill.name}</h3>
-                  <p className="skill-description">
-                    {language === 'ar' ? skill.descriptionAr : skill.descriptionEn}
-                  </p>
-                  <div className="skill-progress-indicator">
-                    <div 
-                      className="skill-progress-bar"
-                      style={{ 
-                        width: '100%',
-                        background: `linear-gradient(90deg, ${skill.color}, ${skill.color}80)`
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="skill-card mx-auto">
+            <div className="skill-card-inner">
+            <h3 className="skills-title">{currentSkills.title}</h3>
+
+<p className="skills-description">
+  {language === 'ar'
+    ? currentSkills.descriptionAr
+    : currentSkills.descriptionEn}
+</p>
+
+<div className="skills-grid">
+  {currentSkills.technologies.map((skill, index) => (
+    <div key={index}>
+      <div className="skill-card-inner">
+
+        <div
+          className="skill-icon-wrapper"
+          style={{ color: skill.color }}
+        >
+          {skill.icon}
+        </div>
+
+        <h3 className="skill-name">{skill.name}</h3>
+
+      </div>
+    </div>
+  ))}
+</div>
+
+
+               </div>
+               </div>
 
           {/* Additional Info Section */}
           <div className="skills-summary">
             <div className="summary-item">
-              <span className="summary-number">{technicalSkills.length}+</span>
+              <span className="summary-number">{frontendSkills.technologies.length}+</span>
               <span className="summary-label">
-                {language === 'ar' ? 'مهارة تقنية' : 'Technical Skills'}
+                {language === 'ar' ? 'مهارة الواجهه الاماميه' : 'FrontEnd Skills'}
               </span>
             </div>
             <div className="summary-item">
-              <span className="summary-number">{softSkills.length}+</span>
+              <span className="summary-number">{backendSkills.technologies.length}+</span>
+              <span className="summary-label">
+                {language === 'ar' ? 'مهارة الواجهه الخلفية' : 'BackEnd Skills'}
+              </span>
+            </div>
+            <div className="summary-item">
+              <span className="summary-number">{softSkills.technologies.length}+</span>
               <span className="summary-label">
                 {language === 'ar' ? 'مهارة شخصية' : 'Soft Skills'}
               </span>

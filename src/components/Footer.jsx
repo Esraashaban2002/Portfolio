@@ -9,22 +9,18 @@ const Footer = () => {
   // Your personal data
   const footerData = {
     name: language === 'ar' ? 'إسراء شعبان' : 'Esraa Shaban',
-    title: language === 'ar' ? 'مطورة Full Stack' : 'Full Stack Developer',
+    nameInitials: 'E.S',
+    title: language === 'ar' ? 'مطورة Full Stack' : 'Full-Stack Developer',
+    titleExtra: language === 'ar' ? 'متخصصة في React & Node.js' : 'React & Node.js Enthusiast',
     description: language === 'ar' 
-      ? 'مطورة Full Stack متخصصة في بناء تطبيقات ويب قابلة للتوسع باستخدام React.js & Node,js مع كود نظيف وقابل للصيانة.'
-      : 'Full Stack Developer focused on building scalable web applications with clean, maintainable code using React.js & Node,js.',
-    initials: 'E.S',
+      ? 'شغوفة ومخلصة في عملي. لقد اكتسبت المهارات والمعرفة اللازمة لتصميم وتطوير تطبيقات ويب سهلة الاستخدام وقابلة للتوسع تجعل مشروعك ناجحاً.'
+      : "Passionate and dedicated to my work. I have acquired the skills and knowledge necessary to design and develop user-friendly, scalable web applications that make your project a success.",
+    callToAction: language === 'ar'
+      ? 'لا تتردد في التواصل معي. أنا دائمًا منفتحة على مناقشة مشاريع جديدة، أفكار إبداعية، أو فرص لتكون جزءًا من رؤيتك.'
+      : "Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
     socialLinks: [
       { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/esraashabanabdeljawad/', label: 'LinkedIn' },
       { icon: 'fab fa-github', url: 'https://github.com/Esraashaban2002', label: 'GitHub' },
-    ],
-    quickLinks: [
-      { name: language === 'ar' ? 'الرئيسية' : 'Home', url: '#home' },
-      { name: language === 'ar' ? 'من أنا' : 'About', url: '#about' },
-      { name: language === 'ar' ? 'المهارات' : 'Skills', url: '#skills' },
-      { name: language === 'ar' ? 'المشاريع' : 'Projects', url: '#projects' },
-      { name: language === 'ar' ? 'الشهادات' : 'Certifications', url: '#education' },
-      { name: language === 'ar' ? 'تواصل معي' : 'Contact', url: '#connect' }
     ]
   };
 
@@ -39,21 +35,29 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row g-4">
-          {/* Brand Column */}
-          <div className="col-lg-4 col-md-6">
-            <div className="footer-brand">
-              <div className="brand-logo mb-3">
-                <span className="logo-initials">{footerData.initials}</span>
-              </div>
-              <h3 className="brand-name">{footerData.name}</h3>
-              <p className="brand-title text-muted mb-3">{footerData.title}</p>
-              <p className="brand-description">
-                {footerData.description}
+        {/* Top Section with CTA and About */}
+        <div className="row g-5 my-auto">
+          {/* DON'T BE SHY - CTA Section */}
+          <div className="col-lg-4">
+            <div className="footer-cta-section">
+              <h3 className="cta-heading">
+                {language === 'ar' ? 'لا تتردد!' : "DON'T BE SHY!"}
+              </h3>
+              <p className="cta-description">
+                {footerData.callToAction}
               </p>
-              
-              {/* Social Links */}
-              <div className="social-links mt-4">
+            </div>
+          </div>
+
+        <div className="col-lg-4">
+          <div className=" align-items-center gy-3 ">
+            <div className="mb-5 footer-social">
+                <span className="initials">{footerData.nameInitials}</span>
+            </div>
+
+            {/* Center - Social Links */}
+            <div className="">
+              <div className="footer-social">
                 {footerData.socialLinks.map((link, index) => (
                   <a
                     key={index}
@@ -69,52 +73,24 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Quick Links Column */}
-          <div className="col-lg-4 col-md-6">
-            <div className="footer-links">
-              <h4 className="footer-title">
-                {language === 'ar' ? 'روابط سريعة' : 'Quick Links'}
-              </h4>
-              <ul className="links-list">
-                {footerData.quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a 
-                      href={link.url} 
-                      onClick={(e) => scrollToSection(e, link.url)}
-                      className="link-item"
-                    >
-                      <i className="fas fa-chevron-right link-icon"></i>
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Contact Column */}
+      </div>
+          {/* WHO AM I - About Section */}
           <div className="col-lg-4">
-            <div className="footer-contact">
-              <h4 className="footer-title">
-                {language === 'ar' ? 'تواصل معي' : 'Contact'}
-              </h4>
-
-              {/* Newsletter/CTA */}
-              <div className="footer-cta mt-4">
-                <p className="cta-text mb-2">
-                  {language === 'ar' 
-                    ? 'هل لديك مشروع؟ دعنا نعمل معاً'
-                    : 'Have a project? Let\'s work together'}
-                </p>
-                <a href="#connect" className="cta-btn" onClick={(e) => scrollToSection(e, '#connect')}>
-                  {language === 'ar' ? 'تواصل معي' : 'Contact Me'}
-                  <i className="fas fa-arrow-right ms-2"></i>
-                </a>
-              </div>
+            <div className="footer-about-section">
+              <h3 className="about-heading">
+                {language === 'ar' ? 'من أنا؟' : "WHO AM I?"}
+              </h3>
+              <p className="about-description">
+                {language === 'ar' 
+                  ? `أنا ${footerData.title} و ${footerData.titleExtra}، ${footerData.description}`
+                  : `I'm a ${footerData.title} & ${footerData.titleExtra}, ${footerData.description}`
+                }
+              </p>
             </div>
           </div>
         </div>
+
+      
 
         {/* Copyright Bar */}
         <div className="footer-bottom">

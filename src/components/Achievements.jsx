@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Achievements.css';
+import itidaLogo from '../assets/images/iditi.png';
+
 const Achievements = () => {
   const { language } = useTheme();
 
@@ -15,7 +17,7 @@ const Achievements = () => {
         : 'Honored for outstanding participation in technical skills training and development program',
       icon: 'fas fa-award',
       color: '#FF4D6D',
-      image: null, // You can add an image if you have one
+      image: itidaLogo, // You can add an image if you have one
       certificateLink: '#', // Add link to certificate if available
       badge: language === 'ar' ? 'تميز' : 'Excellence'
     },
@@ -24,6 +26,7 @@ const Achievements = () => {
   return (
     <section id="achievements" className="section achievements-section">
       <div className="container">
+        
         {/* Section Header */}
         <div className="row mb-5">
           <div className="col-12 text-center">
@@ -45,9 +48,21 @@ const Achievements = () => {
                 </div>
 
                 {/* Icon */}
-                <div className="achievement-icon-wrapper" style={{ backgroundColor: `${achievement.color}15` }}>
+                {/* <div className="achievement-icon-wrapper" style={{ backgroundColor: `${achievement.color}15` }}>
                   <i className={achievement.icon} style={{ color: achievement.color }}></i>
+                </div> */}
+                <div className="university-header mb-4">
+                  <div className="university-logo-wrapper bg-white rounded-circle p-2 shadow-sm">
+                    <img 
+                      src={achievement.image} 
+                      alt={achievement.organization}
+                      className="university-logo rounded-circle"
+                      style={{ width: '100px', height: '60px', objectFit: 'contain' }}
+                    />
+                  </div>
+                
                 </div>
+
 
                 {/* Content */}
                 <div className="achievement-content">

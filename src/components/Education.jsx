@@ -2,8 +2,7 @@ import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Education.css';
 
-// Import university logo (add your logo to assets/images/)
-import universityLogo from '../assets/images/helwan-university-logo.png'; // You'll need to add this image
+import universityLogo from '../assets/images/helwan-university-logo.png'; 
 
 const Education = () => {
   const { language } = useTheme();
