@@ -55,8 +55,31 @@ const Pricing = () => {
   badge: language === 'ar' ? 'الأكثر طلباً' : 'Most Popular',
   recommended: true
 },
+{
+  id: 4,
+  name: language === 'ar' ? 'الخطه المتقدمة' : 'Pro Plan',
+  price: '$150 - $250',
+  description: language === 'ar' 
+    ? 'خطة متقدمة للمشاريع الكبيرة مع مميزات إضافية وأداء عالي'
+    : 'Advanced plan for large-scale projects with premium features and high performance',
+  features: [
+    { name: language === 'ar' ? 'تطوير Full Stack متقدم' : 'Advanced Full Stack development', included: true },
+    { name: language === 'ar' ? 'حتى 10 صفحات' : 'Up to 10 pages', included: true },
+    { name: language === 'ar' ? 'تصميم احترافي مخصص UI/UX' : 'Custom professional UI/UX design', included: true },
+    { name: language === 'ar' ? 'API متقدم + تكامل خارجي' : 'Advanced API + third-party integrations', included: true },
+    { name: language === 'ar' ? 'قاعدة بيانات محسنة' : 'Optimized database architecture', included: true },
+    { name: language === 'ar' ? 'تحسين SEO أساسي' : 'Basic SEO optimization', included: true },
+    { name: language === 'ar' ? 'أداء عالي وسرعة تحميل ممتازة' : 'High performance & fast loading', included: true },
+    { name: language === 'ar' ? 'دعم فني لمدة 14 يوم' : '14 days support after delivery', included: true },
+    { name: language === 'ar' ? 'لوحة تحكم (Dashboard)' : 'Admin dashboard', included: true },
+    { name: language === 'ar' ? 'نظام Authentication (Login/Register)' : 'Authentication system', included: true }
+  ],
+  color: '#0EA5E9',
+  badge: language === 'ar' ? 'الأكثر تطوراً' : 'Advanced',
+  recommended: false
+},
     {
-  id: 3,
+  id: 4,
   name: language === 'ar' ? 'الخطة المخصصة' : 'Enterprise Plan',
   price: 'Custom',
   description: language === 'ar' 
@@ -130,7 +153,7 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="row g-4">
           {pricingPlans.map((plan) => (
-            <div key={plan.id} className="col-lg-4 col-md-6">
+            <div key={plan.id} className="col-lg-3 col-md-6">
               <div className={`pricing-card ${plan.recommended ? 'recommended' : ''}`}>
                 {plan.recommended && (
                   <div className="recommended-badge">

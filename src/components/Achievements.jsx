@@ -18,7 +18,7 @@ const Achievements = () => {
       icon: 'fas fa-award',
       color: '#FF4D6D',
       image: itidaLogo, // You can add an image if you have one
-      certificateLink: '#', // Add link to certificate if available
+      certificateLink: 'https://drive.google.com/file/d/1oF6vAm5it-xQXsKV8rNsP58RHgYus4Tk/view?usp=sharing', // Add link to certificate if available
       badge: language === 'ar' ? 'تميز' : 'Excellence'
     },
   ];
@@ -84,20 +84,13 @@ const Achievements = () => {
                   </p>
 
                   <div className="achievement-actions">
-                    {achievement.certificateLink && achievement.certificateLink !== '#' && (
-                      <a 
+                   <a 
                         href={achievement.certificateLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="certificate-link"
-                      >
-                        <i className="fas fa-eye"></i>
-                        {language === 'ar' ? 'عرض الشهادة' : 'View Certificate'}
+                        className="certificate-link">
+                          <i className="fas fa-share-alt"></i>
                       </a>
-                    )}
-                    <button className="share-btn" onClick={() => console.log('Share achievement')}>
-                      <i className="fas fa-share-alt"></i>
-                    </button>
                   </div>
                 </div>
 

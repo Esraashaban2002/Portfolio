@@ -77,19 +77,11 @@ const About = () => {
 
             {/* Stats Cards */}
             <div className="row stats-row mt-4">
-              <div className="col-6">
+              <div className="col-6  mx-auto">
                 <div className="stat-card">
                   <div className="stat-number">{personalInfo.projects}</div>
                   <div className="stat-label">
                     {language === 'ar' ? 'مشروع' : 'Projects'}
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="stat-card">
-                  <div className="stat-number">{personalInfo.graduation}</div>
-                  <div className="stat-label">
-                    {language === 'ar' ? 'تخرج' : 'Graduated'}
                   </div>
                 </div>
               </div>
