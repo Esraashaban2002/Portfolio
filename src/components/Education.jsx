@@ -18,7 +18,8 @@ const Education = () => {
     period: language === 'ar' ? '٢٠٢١ — ٢٠٢٥' : '2021 — 2025',
     gpa: '3.17/4.0',
     grade: language === 'ar' ? 'جيد جداً' : 'Very Good',
-    graduationProject: 'XR Education App (A+)',
+    graduationProject: 'XR Education App',
+    graduationProjectGPA: '(A+)',
     graduationYear: '2025',
     logo: universityLogo,
   };
@@ -91,6 +92,9 @@ const Education = () => {
                   </span>
                   <span className="ms-2 fw-medium">
                     {educationData.graduationProject}
+                  </span>
+                  <span className="ms-2 fw-bold" style={{color:'#FF4D6D'}}>
+                    {educationData.graduationProjectGPA}
                   </span>
                 </div>
 
