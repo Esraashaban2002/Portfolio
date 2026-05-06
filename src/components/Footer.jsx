@@ -18,10 +18,6 @@ const Footer = () => {
     callToAction: language === 'ar'
       ? 'لا تتردد في التواصل معي. أنا دائمًا منفتحة على مناقشة مشاريع جديدة، أفكار إبداعية، أو فرص لتكون جزءًا من رؤيتك.'
       : "Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
-    socialLinks: [
-      { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/esraashabanabdeljawad/', label: 'LinkedIn' },
-      { icon: 'fab fa-github', url: 'https://github.com/Esraashaban2002', label: 'GitHub' },
-    ]
   };
 
   const scrollToSection = (e, url) => {
@@ -55,23 +51,6 @@ const Footer = () => {
                 <span className="initials">{footerData.nameInitials}</span>
             </div>
 
-            {/* Center - Social Links */}
-            <div className="">
-              <div className="footer-social">
-                {footerData.socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                    aria-label={link.label}
-                  >
-                    <i className={link.icon}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
       </div>
           {/* WHO AM I - About Section */}
@@ -94,23 +73,13 @@ const Footer = () => {
 
         {/* Copyright Bar */}
         <div className="footer-bottom">
-          <div className="row align-items-center">
-            <div className="col-md-6">
+            <div className="text-center">
               <p className="copyright mb-0">
                 © {currentYear} {footerData.name}. 
                 {language === 'ar' ? ' جميع الحقوق محفوظة' : ' All rights reserved.'}
               </p>
             </div>
-            <div className="col-md-6 text-md-end">
-              <p className="credit mb-0">
-                {language === 'ar' ? 'صمم بكل ❤️ بواسطة' : 'Designed with ❤️ by'}{' '}
-                <a href="#home" onClick={(e) => scrollToSection(e, '#home')}>
-                  {footerData.name}
-                </a>
-              </p>
-            </div>
           </div>
-        </div>
       </div>
     </footer>
   );

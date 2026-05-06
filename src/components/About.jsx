@@ -14,7 +14,7 @@ const About = () => {
     email: "esraashaban231@gmail.com",
     phone: "01143274346",
     experience: "3+ years",
-    projects: "3+ projects",
+    projects: "4+ projects",
     graduation: "2025",
     university: "Helwan University",
     gpa: "3.17/4.0"
@@ -41,12 +41,24 @@ const About = () => {
                 </h2>
               </div>
               <div>
-                <p>
-                  {language === 'ar'
-                    ? 'أنا إسراء، مطورة ويب Full-Stack شغوفة بالبرمجة منذ أكثر من خمس سنوات. خلال هذه الرحلة طورت مهاراتي في بناء تطبيقات ويب حديثة وقابلة للتوسع باستخدام React.js وNode.js، مع التركيز على الأداء العالي وتجربة المستخدم المميزة.'
-                    : "I am Esraa, a passionate Full-Stack Web Developer with over 5 years of experience in programming. During this journey, I have developed strong skills in building modern, scalable web applications using React.js and Node.js, with a focus on high performance and exceptional user experience."}
-                </p>
-
+               <p>
+  {language === 'ar'
+    ? <>
+    أنا إسراء، مطورة ويب Full-Stack  شغوفة بالبرمجة منذ أكثر من 
+    <span className="ms-2 fw-bold" style={{ color: '#FF4D6D' }}> 5+</span>{' '}
+        سنوات. خلال هذه الرحلة طورت مهاراتي في بناء تطبيقات ويب حديثة وقابلة للتوسع باستخدام React.js وNode.js، مع التركيز على الأداء العالي وتجربة المستخدم المميزة.
+    </>
+    : (
+      <>
+        I am Esraa, a passionate Full-Stack Web Developer with over 
+        <span className="ms-2 fw-bold" style={{ color: '#FF4D6D' }}>
+          5+ 
+        </span>{' '}
+        years of experience in programming. During this journey, I have developed strong skills in building modern, scalable web applications using React.js and Node.js, with a focus on high performance and exceptional user experience.
+      </>
+    )
+  }
+</p>
                 <p>
                   {language === 'ar'
                     ? 'أعمل على تطوير تطبيقات ويب متكاملة ومساعدة الشركات الناشئة فى تحويل أفكارهم إلى منتجات رقمية احترافية وسريعة ، مع الحرص على بناء حلول برمجية نظيفة ومنظمة وقابلة للصيانة.'
@@ -80,9 +92,6 @@ const About = () => {
               <div className="col-6  mx-auto">
                 <div className="stat-card">
                   <div className="stat-number">{personalInfo.projects}</div>
-                  <div className="stat-label">
-                    {language === 'ar' ? 'مشروع' : 'Projects'}
-                  </div>
                 </div>
               </div>
             </div>

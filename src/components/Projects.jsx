@@ -6,6 +6,7 @@ import '../assets/css/project.css';
 import beautifulShop from '../assets/images/beautifulShop.png';
 import ecommerce from '../assets/images/ecommerce.png';
 import crmDashboard from '../assets/images/crmDashboard.png';
+import yasmenaFlower from '../assets/images/yasmenaFlowers.png';
 
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
@@ -171,6 +172,65 @@ const Projects = () => {
         "بناء معماري نظيف (Clean Architecture) لسهولة التوسع المستقبلي"
       ]
     },
+{
+  id: 4,
+  title: "Yasmena Flowers Website",
+  titleAr: "موقع ياسمينا فلور",
+  
+  description: "A modern flower shop website designed to showcase products in an elegant and user-friendly way, focusing on smooth navigation and attractive visual presentation to enhance user engagement and conversion.",
+  
+  descriptionAr: "موقع متجر ورد بتصميم عصري يهدف لعرض المنتجات بشكل جذاب وسهل الاستخدام، مع التركيز على تجربة مستخدم سلسة تساعد في جذب العملاء وزيادة التفاعل.",
+
+  image: yasmenaFlower,
+
+  badges: [
+    {
+      name: 'HTML5',
+      icon: <FaHtml5 />,
+      color: '#E34F26',
+    },
+    {
+      name: 'CSS3',
+      icon: <FaCss3Alt />,
+      color: '#1572B6',
+    },
+    {
+      name: 'JavaScript',
+      icon: <FaJs />,
+      color: '#F7DF1E',
+    },
+    {
+      name: 'React.js',
+      icon: <FaReact />,
+      color: '#61DAFB',
+    }
+  ],
+
+  category: "Frontend",
+  categoryAr: "واجهة أمامية",
+  categoryId: "frontend",
+
+  liveLink: "https://esraashaban2002.github.io/yasmena-flowers",
+
+  // المميزات بصيغة (Challenge - Solution - Result)
+  features: [
+    "Challenge: Presenting flower products in an attractive and engaging way",
+    "Solution: Designed a clean and visually appealing UI with strong visual hierarchy",
+    "Result: Enhanced user engagement and improved browsing experience",
+    "Implemented smooth and intuitive navigation for better user flow",
+    "Built fully responsive design for seamless experience across all devices",
+    "Optimized performance to ensure fast loading and better user retention"
+  ],
+
+  featuresAr: [
+    "التحدي: عرض منتجات الورد بشكل جذاب يلفت انتباه المستخدم",
+    "الحل: تصميم واجهة عصرية مع تنظيم بصري واضح (Visual Hierarchy)",
+    "النتيجة: تحسين تفاعل المستخدم وتجربة التصفح",
+    "تنفيذ نظام تنقل سهل وبسيط لتحسين تجربة المستخدم",
+    "تصميم متجاوب بالكامل يعمل بكفاءة على جميع الأجهزة",
+    "تحسين الأداء لتقليل وقت التحميل وزيادة بقاء المستخدم داخل الموقع"
+  ]
+}
 
   ];
 

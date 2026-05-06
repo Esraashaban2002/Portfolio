@@ -19,7 +19,7 @@ const Skills = () => {
 
   // Technical Skills Data with Icons and Descriptions
   const frontendSkills = {
-     title: language === 'ar' ? 'تطوير الواجهة الأمامية' : 'Frontend Development',
+     title: language === 'ar' ? 'تطوير الواجهة الأمامية with React' : 'Frontend Development with React',
     technologies: [
     {
       name: 'HTML5',
@@ -66,7 +66,7 @@ const Skills = () => {
     descriptionAr: 'تصميم وتطوير تطبيقات ويب قابلة للتوسع وعالية الأداء باستخدام أحدث تقنيات الواجهة الأمامية، مع التركيز على الهندسة النظيفة، الكود القابل للصيانة، الأداء المحسن، وتجربة مستخدم سلسة عبر جميع الأجهزة.'
 }
   const backendSkills = {
-     title: language === 'ar' ? 'تطوير الواجهة الخلفية' : 'Backend Development',
+     title: language === 'ar' ? 'تطوير الواجهة الخلفية with Node.js' : 'Backend Development with Node.js',
     technologies: [
     {
       name: 'Node.js',

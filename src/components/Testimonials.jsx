@@ -40,7 +40,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="row g-4">
+         <div className="row g-4">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="col-md-6 col-lg-4">
               <div className="testimonial-card">
@@ -81,7 +81,7 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} 
         </div>
       </div>
     </section>

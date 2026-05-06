@@ -9,7 +9,7 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      title: language === 'ar' ? 'شهادة تقدير - ITIDA | TIEC' : 'Certificate of Acknowledgement - ITIDA | TIEC',
+      title: language === 'ar' ? 'شهادة تقدير' : 'Certificate of Acknowledgement',
       organization: 'ITIDA | TIEC',
       year: '2025',
       description: language === 'ar'

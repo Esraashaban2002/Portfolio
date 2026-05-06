@@ -344,15 +344,6 @@ const Connect = () => {
                   >
                     <i className="fab fa-linkedin-in"></i>
                   </a>
-                  <a
-                    href={contactInfo.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link whatsapp"
-                    title="WhatsApp"
-                  >
-                    <i className="fab fa-whatsapp"></i>
-                  </a>
                 </div>
               </div>
             </div>
