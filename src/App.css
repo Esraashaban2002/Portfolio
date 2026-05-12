@@ -137,7 +137,8 @@ body.dark-mode .skill-item {
 
 /* Section Styles */
 .section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin: 4rem 0;
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
