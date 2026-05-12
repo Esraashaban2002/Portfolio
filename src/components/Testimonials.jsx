@@ -2,26 +2,8 @@ import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Testimonials.css';
 
-// Import images (add your testimonial images to assets/images/)
-
-
 const Testimonials = () => {
   const { language } = useTheme();
-
-  const testimonials = [
-    {
-      id: 1,
-      name: language === 'ar' ? " منه عمر" : "Menna Omar",
-      role: "Team Leader Flutter Developer",
-      feedback: language === 'ar' 
-        ? ""
-        : "",
-      rating: 5,
-      image : "#",
-      performanceMetric: language === 'ar' ? "" : "" ,
-      metricIcon: "fas fa-chart-line"
-    }
-  ];
 
   return (
     <section id="testimonials" className="section testimonials-section">
@@ -40,48 +22,49 @@ const Testimonials = () => {
           </div>
         </div>
 
-         <div className="row g-4">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="col-md-6 col-lg-4">
-              <div className="testimonial-card">
-                {/* Stars Rating */}
-                <div className="stars">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <i key={i} className="fas fa-star"></i>
-                  ))}
-                  {[...Array(5 - testimonial.rating)].map((_, i) => (
-                    <i key={i + testimonial.rating} className="fas fa-star star-inactive"></i>
-                  ))}
-                </div>
+        <div className="row g-4 justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <div className="testimonial-card coming-soon-card">
+              {/* Animated Stars */}
+              <div className="stars-animated">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="fas fa-star star-glow"></i>
+                ))}
+              </div>
 
-                {/* Feedback Text */}
-                <p className="testimonial-text">
-                  "{testimonial.feedback}"
+              {/* Coming Soon Badge */}
+              <div className="coming-soon-badge">
+                <div className="badge-icon">
+                  <i className="fas fa-hourglass-half"></i>
+                </div>
+                <span className="badge-text">
+                  {language === 'ar' ? 'قريباً' : 'Coming Soon'}
+                </span>
+              </div>
+
+              {/* Main Message */}
+              <div className="coming-soon-content">
+                <i className="fas fa-comment-dots message-icon"></i>
+                <h3 className="message-title">
+                  {language === 'ar' ? 'تقييمات العملاء قادمة' : 'Client Testimonials Coming'}
+                </h3>
+                <p className="message-text">
+                  {language === 'ar'
+                    ? 'قريباً ستجد هنا آراء العملاء عن تجربتهم في العمل معي. أنا أتطلع لمشاركة تجارب العملاء السعداء معكم!'
+                    : 'Soon you will find client testimonials about their experience working with me. I look forward to sharing happy client experiences with you!'}
                 </p>
+              </div>
 
-                {/* Performance Metric */}
-                <div className="performance-metric">
-                  <i className={testimonial.metricIcon}></i>
-                  <span>{testimonial.performanceMetric}</span>
-                </div>
-
-                {/* User Info */}
-                <div className="testimonial-footer">
-                  <div className="user-info">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="user-avatar"
-                    />
-                    <div className="user-details">
-                      <h4 className="user-name">{testimonial.name}</h4>
-                      <p className="user-role">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </div>
+              {/* Animated Dots */}
+              <div className="animated-dots">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
               </div>
             </div>
-          ))} 
+          </div>
         </div>
       </div>
     </section>
