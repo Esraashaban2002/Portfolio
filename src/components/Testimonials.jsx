@@ -5,66 +5,93 @@ import '../assets/css/Testimonials.css';
 const Testimonials = () => {
   const { language } = useTheme();
 
+  const testimonials = [
+    {
+      id: 1,
+      name: language === 'ar' ? "منة عمر" : "Menna Omar",
+      role: language === 'ar' ? "مدربة" : "Trainer",
+      date: "12 May 2026, 6:41 PM",
+      feedback: language === 'ar'
+        ? "هي منظمة للغاية وتدير وقتها بفعالية، مما يسمح لها بإكمال المهام بكفاءة دون المساس بالجودة."
+        : "She is highly organized and manages her time effectively, allowing her to complete tasks efficiently without compromising quality.",
+      rating: 5,
+      deliveryMetric: language === 'ar' ? "تسليم قبل الموعد" : "Early Delivery",
+      performanceMetric: "40%",
+      initials: language === 'ar' ? "م.ع" : "M.O",
+      linkedin: "https://www.linkedin.com/in/mennaomar/"
+    }
+  ];
+
   return (
     <section id="testimonials" className="section testimonials-section">
       <div className="container">
         {/* Section Title */}
-        <div className="row mb-5">
+        <div className="row mb-4">
           <div className="col-12 text-center">
             <h1 className="section-title">
               {language === 'ar' ? 'آراء العملاء' : 'Testimonials'}
             </h1>
             <p className="section-subtitle">
               {language === 'ar'
-                ? 'ما يقوله العملاء عن تجربتهم في العمل معي'
-                : 'What clients say about their experience working with me'}
+                ? 'بناء الثقة يبدأ من عرض نتائج حقيقية وتجارب ناجحة مع عملاء سابقين.'
+                : 'Building trust starts with showcasing real results and successful experiences with past clients.'}
             </p>
           </div>
         </div>
 
-        <div className="row g-4 justify-content-center">
-          <div className="col-md-8 col-lg-6">
-            <div className="testimonial-card coming-soon-card">
-              {/* Animated Stars */}
-              <div className="stars-animated">
-                {[...Array(5)].map((_, i) => (
-                  <i key={i} className="fas fa-star star-glow"></i>
-                ))}
-              </div>
-
-              {/* Coming Soon Badge */}
-              <div className="coming-soon-badge">
-                <div className="badge-icon">
-                  <i className="fas fa-hourglass-half"></i>
+        {/* Testimonials Grid */}
+        <div className="row g-4 ">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="col-lg-4 col-md-6 col-12">
+              <div className="testimonial-card">
+                {/* Stars */}
+                <div className="testimonial-stars">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <i key={i} className="fas fa-star"></i>
+                  ))}
                 </div>
-                <span className="badge-text">
-                  {language === 'ar' ? 'قريباً' : 'Coming Soon'}
-                </span>
-              </div>
 
-              {/* Main Message */}
-              <div className="coming-soon-content">
-                <i className="fas fa-comment-dots message-icon"></i>
-                <h3 className="message-title">
-                  {language === 'ar' ? 'تقييمات العملاء قادمة' : 'Client Testimonials Coming'}
-                </h3>
-                <p className="message-text">
-                  {language === 'ar'
-                    ? 'قريباً ستجد هنا آراء العملاء عن تجربتهم في العمل معي. أنا أتطلع لمشاركة تجارب العملاء السعداء معكم!'
-                    : 'Soon you will find client testimonials about their experience working with me. I look forward to sharing happy client experiences with you!'}
-                </p>
-              </div>
+                {/* Feedback Text */}
+                <p className="card-feedback">"{testimonial.feedback}"</p>
 
-              {/* Animated Dots */}
-              <div className="animated-dots">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
+                {/* Date */}
+                <div className="testimonial-date">
+                  <i className="fas fa-calendar-alt"></i>
+                  <span>
+                    {language === 'ar' 
+                      ? '12 مايو 2026، 6:41 مساءً'
+                      : 'May 12, 2026, 6:41 PM'}
+                  </span>
+                </div>
+
+                {/* Metrics */}
+                <div className="card-metrics">
+                  <span className="metric-badge delivery">
+                    <i className="fas fa-check-circle"></i>
+                    {testimonial.deliveryMetric}
+                  </span>
+                </div>
+
+                {/* Author Info */}
+                <div className="card-author">
+                  <div className="author-initials">{testimonial.initials}</div>
+                  <div className="author-info">
+                    <h5 className="author-name">{testimonial.name}</h5>
+                    <p className="author-role">{testimonial.role}</p>
+                  </div>
+                  <a 
+                    href={testimonial.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="linkedin-link"
+                    aria-label="LinkedIn Profile"
+                  >
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
