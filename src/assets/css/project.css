@@ -870,6 +870,16 @@
 [dir="rtl"] .projects-filter {
     direction: rtl;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-pink);
+  font-weight: bold;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
 
 /* ====================================
    Responsive Design

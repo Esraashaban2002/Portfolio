@@ -14,7 +14,7 @@ const About = () => {
     email: "esraashaban231@gmail.com",
     phone: "01143274346",
     experience: "3+ years",
-    projects: "4+ projects",
+    projects: "5+ projects",
     graduation: "2025",
     university: "Helwan University",
     gpa: "3.17/4.0"
