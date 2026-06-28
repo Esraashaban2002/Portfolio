@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.98b501ac.css",
-    "main.js": "/Portfolio/static/js/main.0aec1a79.js",
+    "main.css": "/Portfolio/static/css/main.f0c0ccfb.css",
+    "main.js": "/Portfolio/static/js/main.30622690.js",
     "static/media/yasmenaFlowers.png": "/Portfolio/static/media/yasmenaFlowers.c4e282ab30387c519508.png",
     "static/media/crmDashboard.png": "/Portfolio/static/media/crmDashboard.03844e8ffed4de74a361.png",
     "static/media/beautifulShop.png": "/Portfolio/static/media/beautifulShop.cc7a1603cf1250f0099b.png",
+    "static/media/dawaya.png": "/Portfolio/static/media/dawaya.15f8536bc5979d3d9068.png",
     "static/media/ecommerce.png": "/Portfolio/static/media/ecommerce.86f23a0f6454375e781a.png",
     "static/media/Esraa Shaban CV.pdf": "/Portfolio/static/media/Esraa Shaban CV.0123b37e050ae54b4a7e.pdf",
     "static/media/LogoAbout.png": "/Portfolio/static/media/LogoAbout.1d35b6871213151731b1.png",
     "static/media/logoP.png": "/Portfolio/static/media/logoP.e2a1586d8217ba66b4ea.png",
     "static/media/helwan-university-logo.png": "/Portfolio/static/media/helwan-university-logo.798a517400e3e09bd2f6.png",
     "index.html": "/Portfolio/index.html",
-    "main.98b501ac.css.map": "/Portfolio/static/css/main.98b501ac.css.map",
-    "main.0aec1a79.js.map": "/Portfolio/static/js/main.0aec1a79.js.map"
+    "main.f0c0ccfb.css.map": "/Portfolio/static/css/main.f0c0ccfb.css.map",
+    "main.30622690.js.map": "/Portfolio/static/js/main.30622690.js.map"
   },
   "entrypoints": [
-    "static/css/main.98b501ac.css",
-    "static/js/main.0aec1a79.js"
+    "static/css/main.f0c0ccfb.css",
+    "static/js/main.30622690.js"
   ]
 }
